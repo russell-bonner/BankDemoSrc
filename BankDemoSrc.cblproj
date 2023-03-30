@@ -495,9 +495,8 @@
   <Import Project="$(MSBuildExtensionsPath)\Micro Focus\Visual COBOL\v1.0\MicroFocus.COBOL.targets" />
   <PropertyGroup>
     <PreBuildEvent />
-    <PostBuildEvent>copy C:\Users\mfisys1\source\repos\BankDemoSrc\bin\x86\Debug\*.MOD C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib
-copy C:\Users\mfisys1\source\repos\BankDemoSrc\bin\x86\Debug\*.dll C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib
-copy C:\Users\mfisys1\source\repos\BankDemoSrc\bin\x86\Debug\*.idy C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
