@@ -1,0 +1,509 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{3B7E3DD6-31CF-4CA0-8DB1-87078FE6D391}</ProjectGuid>
+    <ProjectTypeGuids>{6710734B-1D50-4f99-AF91-F73BB8168F21};{535C04D7-A2A5-47c7-83E0-B340A995CD1F}</ProjectTypeGuids>
+    <OutputName>BankDemoSrc</OutputName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BankDemoSrc</RootNamespace>
+    <LinkMultiDlls>true</LinkMultiDlls>
+    <MFProjectType>Native</MFProjectType>
+    <COBOLDir>False</COBOLDir>
+    <MFDependencyPaths>..\BankDemoSrc\src\copybook</MFDependencyPaths>
+    <BmsCopybookOutputLocation>..\BankDemoSrc\src\copybook</BmsCopybookOutputLocation>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\x86\Debug\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <ManagedCode>False</ManagedCode>
+    <MaxError>100</MaxError>
+    <Dialect>ENTCOBOL</Dialect>
+    <Charset>ASCII</Charset>
+    <CICSECM>CICSECM()</CICSECM>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\x86\Release\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <ManagedCode>False</ManagedCode>
+    <MaxError>100</MaxError>
+    <Dialect>ENTCOBOL</Dialect>
+    <Charset>EBCDIC</Charset>
+  </PropertyGroup>
+  <ItemGroup>
+    <AsmFile Include="src\assembler\UDATECNV.mlc" />
+    <AsmFile Include="src\assembler\UTWOSCMP.mlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <BmsFile Include="src\bms\DFHZCSGM.bms" />
+    <BmsFile Include="src\bms\MBANK10.bms" />
+    <BmsFile Include="src\bms\MBANK20.bms" />
+    <BmsFile Include="src\bms\MBANK30.bms" />
+    <BmsFile Include="src\bms\MBANK35.bms" />
+    <BmsFile Include="src\bms\MBANK40.bms" />
+    <BmsFile Include="src\bms\MBANK50.bms" />
+    <BmsFile Include="src\bms\MBANK60.bms" />
+    <BmsFile Include="src\bms\MBANK70.bms" />
+    <BmsFile Include="src\bms\MBANK80.bms" />
+    <BmsFile Include="src\bms\MBANK90.bms" />
+    <BmsFile Include="src\bms\MBANK99.bms" />
+    <BmsFile Include="src\bms\MBANKZZ.bms" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\cobol\core\.settings\BBANK10P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK20P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK30P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK35P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK40P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK50P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK60P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK70P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK80P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK90P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANK99P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BBANKZZP.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BCASH00P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BCASH01P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BCASH02P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\BCASH03P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\CLOSEFIL.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\DFHUAINS.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\DFHZCSGM.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\OPENFIL.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK00P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK10P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK20P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK30P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK35P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK40P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK50P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK60P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK70P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK80P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK90P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANK99P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SBANKZZP.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SCASH00P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SCASHDRV.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SCHAR00P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SPSWD01P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\SSTMT01P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\STRAC00P.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\UBNKPLT1.cbl.mfdirset" />
+    <None Include="src\cobol\core\.settings\UBNKPLT2.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK01P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK02P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK03P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK04P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK05P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK06P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK07P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK08P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK09P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK10P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK11P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK51P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DBANK52P.cbl.mfdirset" />
+    <None Include="src\cobol\data\sql\.settings\DHELP01P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK01P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK02P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK03P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK04P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK05P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK06P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK07P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK08P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK09P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DBANK11P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DCASH01P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DCASH02P.cbl.mfdirset" />
+    <None Include="src\cobol\data\vsam\.settings\DHELP01P.cbl.mfdirset" />
+    <None Include="src\copybook\CABENDD.cpy" />
+    <None Include="src\copybook\CABENDPO.cpy" />
+    <None Include="src\copybook\CBANKD01.cpy" />
+    <None Include="src\copybook\CBANKD02.cpy" />
+    <None Include="src\copybook\CBANKD03.cpy" />
+    <None Include="src\copybook\CBANKD04.cpy" />
+    <None Include="src\copybook\CBANKD05.cpy" />
+    <None Include="src\copybook\CBANKD06.cpy" />
+    <None Include="src\copybook\CBANKD07.cpy" />
+    <None Include="src\copybook\CBANKD08.cpy" />
+    <None Include="src\copybook\CBANKD09.cpy" />
+    <None Include="src\copybook\CBANKD10.cpy" />
+    <None Include="src\copybook\CBANKD11.cpy" />
+    <None Include="src\copybook\CBANKD51.cpy" />
+    <None Include="src\copybook\CBANKD52.cpy" />
+    <None Include="src\copybook\CBANKDAT.cpy" />
+    <None Include="src\copybook\CBANKEXT.cpy" />
+    <None Include="src\copybook\CBANKSAC.cpy" />
+    <None Include="src\copybook\CBANKSAT.cpy" />
+    <None Include="src\copybook\CBANKSCS.cpy" />
+    <None Include="src\copybook\CBANKSDT.cpy" />
+    <None Include="src\copybook\CBANKSSP.cpy" />
+    <None Include="src\copybook\CBANKSTX.cpy" />
+    <None Include="src\copybook\CBANKTXD.cpy" />
+    <None Include="src\copybook\CBANKVAC.cpy" />
+    <None Include="src\copybook\CBANKVAT.cpy" />
+    <None Include="src\copybook\CBANKVCS.cpy" />
+    <None Include="src\copybook\CBANKVTX.cpy" />
+    <None Include="src\copybook\CBANKX02.cpy" />
+    <None Include="src\copybook\CBANKX03.cpy" />
+    <None Include="src\copybook\CBANKX04.cpy" />
+    <None Include="src\copybook\CBANKX05.cpy" />
+    <None Include="src\copybook\CBANKX06.cpy" />
+    <None Include="src\copybook\CBANKX07.cpy" />
+    <None Include="src\copybook\CBANKX08.cpy" />
+    <None Include="src\copybook\CBANKX09.cpy" />
+    <None Include="src\copybook\CBANKX11.cpy" />
+    <None Include="src\copybook\CBANKXT1.cpy" />
+    <None Include="src\copybook\CCASHD01.cpy" />
+    <None Include="src\copybook\CCASHD02.cpy" />
+    <None Include="src\copybook\CCASHDAT.cpy" />
+    <None Include="src\copybook\CCASHEXT.cpy" />
+    <None Include="src\copybook\CCASHX01.cpy" />
+    <None Include="src\copybook\CCASHX02.cpy" />
+    <None Include="src\copybook\CDATED.cpy" />
+    <None Include="src\copybook\CENTRY.cpy" />
+    <None Include="src\copybook\CHELPD01.cpy" />
+    <None Include="src\copybook\CHELPSQL.cpy" />
+    <None Include="src\copybook\CHELPVSM.cpy" />
+    <None Include="src\copybook\CHELPX01.cpy" />
+    <None Include="src\copybook\CIMSAIB.cpy" />
+    <None Include="src\copybook\CIMSCONS.cpy" />
+    <None Include="src\copybook\CIOFUNCS.cpy" />
+    <None Include="src\copybook\CPSWDD01.cpy" />
+    <None Include="src\copybook\CPSWDX01.cpy" />
+    <None Include="src\copybook\CRETURN.cpy" />
+    <None Include="src\copybook\CSCRNHDD.cpy" />
+    <None Include="src\copybook\CSCRNHP1.cpy" />
+    <None Include="src\copybook\CSCRNHP2.cpy" />
+    <None Include="src\copybook\CSTATESD.cpy" />
+    <None Include="src\copybook\CSTMTD01.cpy" />
+    <None Include="src\copybook\CSTMTJCL.cpy" />
+    <None Include="src\copybook\CSTMTX01.cpy" />
+    <None Include="src\copybook\CTIMERD.cpy" />
+    <None Include="src\copybook\CTIMERP.cpy" />
+    <None Include="src\copybook\CTRACE.cpy" />
+    <None Include="src\copybook\CTSTAMPD.cpy" />
+    <None Include="src\copybook\CTSTAMPP.cpy" />
+    <None Include="src\copybook\CVERSND.cpy" />
+    <None Include="src\copybook\CVERSNP1.cpy" />
+    <None Include="src\copybook\DFHZSGM.cpy" />
+    <None Include="src\copybook\MBANK10.cpy" />
+    <None Include="src\copybook\MBANK20.cpy" />
+    <None Include="src\copybook\MBANK30.cpy" />
+    <None Include="src\copybook\MBANK35.cpy" />
+    <None Include="src\copybook\MBANK40.cpy" />
+    <None Include="src\copybook\MBANK50.cpy" />
+    <None Include="src\copybook\MBANK60.cpy" />
+    <None Include="src\copybook\MBANK70.cpy" />
+    <None Include="src\copybook\MBANK80.cpy" />
+    <None Include="src\copybook\MBANK90.cpy" />
+    <None Include="src\copybook\MBANK99.cpy" />
+    <None Include="src\copybook\MBANKZZ.cpy" />
+    <None Include="src\ctlcards\KBNKSRT1.ctl" />
+    <None Include="src\ctlcards\KBNKTSO1.ctl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\cobol\core\BBANK10P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK20P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK30P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK35P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK40P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK50P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK60P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK70P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK80P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK90P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANK99P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BBANKZZP.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BCASH00P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BCASH01P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BCASH02P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\BCASH03P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\CLOSEFIL.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\DFHUAINS.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+      <Dialect>MF</Dialect>
+    </Compile>
+    <Compile Include="src\cobol\core\DFHZCSGM.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+      <Dialect>MF</Dialect>
+    </Compile>
+    <Compile Include="src\cobol\core\OPENFIL.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK00P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK10P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK20P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK30P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK35P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK40P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK50P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK60P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK70P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK80P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK90P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANK99P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SBANKZZP.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SCASH00P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SCASHDRV.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SCHAR00P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SCUSTOMP.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SPSWD01P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SSECUREP.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SSTMT01P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\STRAC00P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\SVERSONP.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\UBNKPLT1.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\UBNKPLT2.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\UDATECNV.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\UTWOSCMP.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\ZBNKE15.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\ZBNKE35.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\ZBNKEXT1.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\ZBNKLOAD.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\core\ZBNKPRT1.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK01P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK02P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK03P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK04P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK05P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK06P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK07P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK08P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK09P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK10P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK11P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK51P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+      <CICSECM>NOCICSECM</CICSECM>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DBANK52P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+      <CICSECM>NOCICSECM</CICSECM>
+    </Compile>
+    <Compile Include="src\cobol\data\sql\DHELP01P.cbl">
+      <SQLDirectives>SQL(DBMAN=ODBC) SQL(ODBCV3) SQL(TARGETDB=POSTGRESQL) SQL(NOCHECK)</SQLDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK01P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK02P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK03P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK04P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK05P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK06P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK07P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK08P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK09P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK11P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK51P.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANK52P.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DBANKIOP.cbl">
+      <CICSECM>NOCICSECM</CICSECM>
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DCASH01P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DCASH02P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+    <Compile Include="src\cobol\data\vsam\DHELP01P.cbl">
+      <NoSqlDirectives>True</NoSqlDirectives>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <JCLFile Include="src\jcl\ZBNKAIX.jcl" />
+    <JCLFile Include="src\jcl\ZBNKAIX2.jcl" />
+    <JCLFile Include="src\jcl\ZBNKBAT1.jcl" />
+    <JCLFile Include="src\jcl\ZBNKDEL.jcl" />
+    <JCLFile Include="src\jcl\ZBNKEXT1.jcl" />
+    <JCLFile Include="src\jcl\ZBNKINT1.jcl" />
+    <JCLFile Include="src\jcl\ZBNKPATH.jcl" />
+    <JCLFile Include="src\jcl\ZBNKPRT1.jcl" />
+    <JCLFile Include="src\jcl\ZBNKPRTZ.jcl" />
+    <JCLFile Include="src\jcl\ZBNKSTMS.jcl" />
+    <JCLFile Include="src\jcl\ZBNKSTMT.jcl" />
+    <JCLFile Include="src\jcl\ZBNKUNLD.jcl" />
+    <JCLFile Include="src\proclib\YBATTSO.prc" />
+    <JCLFile Include="src\proclib\YBNKEXTD.prc" />
+    <JCLFile Include="src\proclib\YBNKEXTP.prc" />
+    <JCLFile Include="src\proclib\YBNKEXTS.prc" />
+    <JCLFile Include="src\proclib\YBNKEXTV.prc" />
+    <JCLFile Include="src\proclib\YBNKPRT1.prc" />
+    <JCLFile Include="src\proclib\YBNKPRTZ.prc" />
+    <JCLFile Include="src\proclib\YBNKSRT1.prc" />
+    <JCLFile Include="src\proclib\YIMSBMP.prc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Micro Focus\Visual COBOL\v1.0\MicroFocus.COBOL.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent>copy C:\Users\mfisys1\source\repos\BankDemoSrc\bin\x86\Debug\*.MOD C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib
+copy C:\Users\mfisys1\source\repos\BankDemoSrc\bin\x86\Debug\*.dll C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib
+copy C:\Users\mfisys1\source\repos\BankDemoSrc\bin\x86\Debug\*.idy C:\Users\mfisys1\source\repos\BankDemo\BANKVSAM\system\loadlib</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
